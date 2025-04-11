@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Color de fondo de la página */
+        body {
+            background-color: #dee3eb;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto 1fr auto;
+            min-height: 100vh;
+        }
+
+        header {
+            display: flex;
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+            background-color: #0c3986;
+            color: white;
+            padding: 10px 20px;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        nav {
+            display: flex;
+            grid-row: 2 / 3;
+            gap: 20px;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 0;
+            background-color: #2f59a7;
+        }
+
+        /* quitar subrayado y color azul de los enlaces */
+        nav > a {
+            text-decoration: none;
+            color: white
+        }
+
+        /* efecto transicion hover sobre los enlaces */
+        nav > a:hover {
+            transition: 0.3s;
+
+        }
+
+        /* EL cuerpo principal es un grid con tres filas y dos columnas*/
+        .container-body {
+            display: grid;
+            grid-template-columns: 1fr 30%;
+            grid-template-rows: 1fr 1fr 1fr;
+            row-gap: 10px;
+            column-gap: 10px;
+        }
+
+        .left-col {
+            grid-column: 1 / 2;
+            grid-row: 1 / 4;
+            padding: 20px 20px;
+        }
+
+        .left-col .fakeimg {
+            display: flex;
+            color: white;
+            font-size: 20px;
+            width: 800px;
+            height: 400px;
+            max-width: 100%;
+            background-color: #5d5555;
+            border-radius: 12px;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Contenedor padre grid de toda la página -->
+    <div class="container">
+
+        <!-- encabezado (primera fila) -->
+        <header>
+            <h1>Noticias hoy</h1>
+            <h4>Tu fuente de información actualizada</h4>
+        </header>
+
+        <!-- barra de navegación (segunda fila) -->
+        <nav>
+            <a href="#">Inicio</a>
+            <a href="#">Noticias</a>
+            <a href="#">Deportes</a>
+            <a href="#">Cultura</a>
+            <a href="#">Contacto</a>
+        </nav>
+
+        <!-- Cuerpo principal de la página (tercera fila) -->
+        <div class="container-body">
+            <!-- Columna izquierda con noticia principal (vista horizontal ordenador) -->
+            <div class="left-col">
+                <div class="fakeimg">Imagen</div>
+                <h3>Noticia principal: Grandes Eventos del Día</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Proin fermentum, neque quis gravida viverra, metus libero
+                    tempor urna, vitae faucibus urna justo nec neque.
+                </p>
+            </div>
+
+            <!-- Columna derecha con noticias secundarias -->
+            <div class="columna-der">
+                <div class="fakeimg"
+            </div>
+        </div>
+
+
+    </div>
+</body>
+</html>
