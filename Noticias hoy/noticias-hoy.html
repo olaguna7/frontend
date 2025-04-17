@@ -23,6 +23,7 @@
             min-height: 100vh;
         }
 
+        /* Cabecera con titulo de la página */
         header {
             display: flex;
             grid-column: 1 / 2;
@@ -45,16 +46,15 @@
             background-color: #2f59a7;
         }
 
-        /* quitar subrayado y color azul de los enlaces */
-        nav > a {
+        /* Barra de navegación */
+        nav a {
             text-decoration: none;
             color: white
         }
 
-        /* efecto transicion hover sobre los enlaces */
-        nav > a:hover {
+        nav a:hover {
             transition: 0.3s;
-
+            color: #40e6f2;
         }
 
         /* EL cuerpo principal es un grid con tres filas y dos columnas*/
@@ -72,18 +72,49 @@
             padding: 20px 20px;
         }
 
-        .left-col .fakeimg {
+        /* Noticias secundarias */
+        #new-1 {
+            margin-top: 20px;
+            grid-column: 2 / 3;
+            grid-row: 1 / 2;
+        }
+
+        #new-2 {
+            margin-top: 20px;
+            grid-column: 2 / 3;
+            grid-row: 2 / 3;
+        }
+
+        #new-3 {
+            margin-top: 20px;
+            grid-column: 2 / 3;
+            grid-row: 3 / 4;
+            margin-bottom: 20px;
+        }
+
+        /* Centrar el texto de la imagen placeholder y estilos comunes*/
+        .fakeimg {
             display: flex;
             color: white;
-            font-size: 20px;
-            width: 800px;
-            height: 400px;
-            max-width: 100%;
-            background-color: #5d5555;
             border-radius: 12px;
             align-items: center;
             justify-content: center;
+            background-color: #5d5555;
         }
+
+        /* Pie de página */
+        footer {
+            display: flex;
+            background-color: #2f59a7;
+            height: 50px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        footer p {
+            color: white;
+        }
+
     </style>
 </head>
 <body>
@@ -119,12 +150,26 @@
             </div>
 
             <!-- Columna derecha con noticias secundarias -->
-            <div class="columna-der">
-                <div class="fakeimg"
+            <div id="new-1">
+                <div class="fakeimg">Imagen</div>
+                   <h3>Noticia 1</h3>
+                <p>Breve descripción de la noticia 1</p>
+            </div>
+            <div id="new-2">
+                <div class="fakeimg">Imagen</div>
+                <h3>Noticia 2</h3>
+                <p>Breve descripción de la noticia 2</p>
+            </div>
+             <div id="new-3">
+                <div class="fakeimg">Imagen</div>
+                <h3>Noticia 3</h3>
+                <p>Breve descripción de la noticia 3</p>
             </div>
         </div>
 
-
+        <footer>
+            <p>&copy; 2025 Noticias Hoy - Todos los derechos reservados</p>
+        </footer>
     </div>
 </body>
 </html>
